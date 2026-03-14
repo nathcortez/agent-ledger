@@ -1,0 +1,31 @@
+{
+  "name": "agent-ledger",
+  "version": "1.0.0",
+  "description": "Onchain reputation infrastructure for autonomous trading agents — verifiable identity, decision logs, and trustless performance history.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathcortez/agent-ledger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nathcortez/agent-ledger/issues"
+  },
+  "homepage": "https://github.com/nathcortez/agent-ledger#readme",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "dotenv": "^17.3.1",
+    "viem": "^2.47.4"
+  }
+}

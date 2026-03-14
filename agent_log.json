@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-14T23:15:22.265Z",
+    "agent": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2093.58,
+    "reason": "RSI neutral (67.0)",
+    "rsi": 67.04026567040263,
+    "trend": "NEUTRAL",
+    "onchain_tx": null
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "name": "AgentLedger",
+  "version": "1.0.0",
+  "description": "Autonomous trading agent with verifiable onchain reputation and decision logs",
+  "identity": {
+    "standard": "ERC-8004",
+    "chain": "base-sepolia",
+    "operator": "PENDING_WALLET_ADDRESS"
+  },
+  "capabilities": [
+    "market-analysis",
+    "signal-generation",
+    "onchain-logging",
+    "autonomous-trading"
+  ],
+  "tools": [
+    {
+      "name": "binance-market-data",
+      "description": "Fetches ETH/USDT price data from Binance public API",
+      "type": "api"
+    },
+    {
+      "name": "decision-logger",
+      "description": "Logs trading decisions to Base Sepolia blockchain",
+      "type": "blockchain"
+    },
+    {
+      "name": "uniswap-executor",
+      "description": "Executes swaps on Uniswap v3 Base Sepolia",
+      "type": "defi"
+    }
+  ],
+  "safety": {
+    "max_position_size_usd": 100,
+    "allowed_pairs": ["ETH/USDC"],
+    "requires_onchain_log": true,
+    "testnet_only": true
+  },
+  "created_at": "2026-03-14T00:00:00Z"
+}
