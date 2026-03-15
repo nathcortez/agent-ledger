@@ -4,6 +4,8 @@ import * as fs from 'fs';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
+import { logActionOnchain } from './logOnchain';
+
 const LOG_FILE = 'agent_log.json';
 const INTERVAL_MS = 5 * 60 * 1000; // 5 minutos
 
@@ -58,6 +60,20 @@ async function runCycle(cycleId: number): Promise<void> {
     trend: signal.trend,
     onchain_tx: null, // se llenará cuando deployemos el contrato
   };
+
+// Log onchain
+  let txHash: string | null = null;
+  try {
+    txHash = await logActionOnchain(
+      agentAddress,
+      signal.action,
+      signal.price,
+      signal.rsi
+    );
+  } catch (e) {
+    console.log('⚠️ Onchain log failed (node not running?)');
+  }
+  entry.onchain_tx = txHash;
 
   const log = loadLog();
   log.push(entry);

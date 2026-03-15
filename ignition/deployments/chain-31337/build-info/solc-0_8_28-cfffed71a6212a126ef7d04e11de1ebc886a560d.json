@@ -1,0 +1,39 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-cfffed71a6212a126ef7d04e11de1ebc886a560d",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/AgentLedger.sol": "project/contracts/AgentLedger.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/AgentLedger.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract AgentLedger {\r\n    \r\n    struct AgentRecord {\r\n        address agentAddress;\r\n        string agentId;\r\n        string action;      // \"HOLD\", \"BUY\", \"SELL\"\r\n        int256 price;       // precio * 100 (ej: 209358 = $2093.58)\r\n        int256 rsi;         // RSI * 10\r\n        uint256 timestamp;\r\n    }\r\n\r\n    AgentRecord[] public records;\r\n    uint256 public totalLogs;\r\n\r\n    event ActionLogged(\r\n        address indexed agentAddress,\r\n        string agentId,\r\n        string action,\r\n        int256 price,\r\n        uint256 timestamp\r\n    );\r\n\r\n    function logAction(\r\n        string memory agentId,\r\n        string memory action,\r\n        int256 price,\r\n        int256 rsi\r\n    ) public {\r\n        AgentRecord memory record = AgentRecord({\r\n            agentAddress: msg.sender,\r\n            agentId: agentId,\r\n            action: action,\r\n            price: price,\r\n            rsi: rsi,\r\n            timestamp: block.timestamp\r\n        });\r\n\r\n        records.push(record);\r\n        totalLogs++;\r\n\r\n        emit ActionLogged(msg.sender, agentId, action, price, block.timestamp);\r\n    }\r\n\r\n    function getRecord(uint256 index) public view returns (AgentRecord memory) {\r\n        return records[index];\r\n    }\r\n\r\n    function getAllRecords() public view returns (AgentRecord[] memory) {\r\n        return records;\r\n    }\r\n}"
+      }
+    }
+  }
+}
