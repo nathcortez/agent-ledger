@@ -1,13 +1,14 @@
 import { createWalletClient, createPublicClient, http, parseAbi } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { hardhat } from "viem/chains";
+import { sepolia } from "viem/chains";
+import * as dotenv from "dotenv";
+dotenv.config();
 
-// Cuenta de prueba de Hardhat (tiene ETH infinito)
 const account = privateKeyToAccount(
-  "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
+  process.env.PRIVATE_KEY as `0x${string}`
 );
 
-const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+const CONTRACT_ADDRESS = "0x751BbC1f476e1e4988C8B47C1BFA31A39C6Fe237";
 
 const abi = parseAbi([
   "function logAction(string agentId, string action, int256 price, int256 rsi) public",
@@ -16,13 +17,13 @@ const abi = parseAbi([
 
 const walletClient = createWalletClient({
   account,
-  chain: hardhat,
-  transport: http("http://127.0.0.1:8545"),
+  chain: sepolia,
+  transport: http("https://ethereum-sepolia-rpc.publicnode.com"),
 });
 
 const publicClient = createPublicClient({
-  chain: hardhat,
-  transport: http("http://127.0.0.1:8545"),
+  chain: sepolia,
+  transport: http("https://ethereum-sepolia-rpc.publicnode.com"),
 });
 
 export async function logActionOnchain(
@@ -32,12 +33,11 @@ export async function logActionOnchain(
   rsi: number
 ) {
   const hash = await walletClient.writeContract({
-    address: CONTRACT_ADDRESS,
+    address: CONTRACT_ADDRESS as `0x${string}`,
     abi,
     functionName: "logAction",
     args: [agentId, action, BigInt(Math.round(price * 100)), BigInt(Math.round(rsi * 10))],
   });
-
   console.log(`✅ Onchain log: ${action} | TxHash: ${hash}`);
   return hash;
 }

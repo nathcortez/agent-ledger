@@ -82,5 +82,77 @@
     "rsi": 27.02702702702706,
     "trend": "NEUTRAL",
     "onchain_tx": "0x9adf693b39f6f28806aaa4799199451b03a4b805e1ce057120ecf580a3ed99b7"
+  },
+  {
+    "id": 1,
+    "timestamp": "2026-03-15T13:32:32.859Z",
+    "agent": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+    "action": "HOLD",
+    "score": 75,
+    "price": 2095.31,
+    "reason": "RSI oversold (25.6)",
+    "rsi": 25.57972746832459,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x2557c52c55d126a060f66b4044d7eb69af594b86b83439db18e0142b77b1d7e1"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-15T13:37:33.303Z",
+    "agent": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+    "action": "HOLD",
+    "score": 75,
+    "price": 2092.77,
+    "reason": "RSI oversold (23.8)",
+    "rsi": 23.78588387653788,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x97237ad7a3bde604a75409bc4cc24e3912084a416f291efc7e5358a276f95588"
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-15T13:42:33.338Z",
+    "agent": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+    "action": "HOLD",
+    "score": 75,
+    "price": 2088.72,
+    "reason": "RSI oversold (22.1)",
+    "rsi": 22.135523613962604,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x9a1113b288d418ee45628d4c9479b1d18acf994514240408420b89eacef08e5e"
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-15T13:58:20.693Z",
+    "agent": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2095.37,
+    "reason": "RSI neutral (33.5)",
+    "rsi": 33.52429450456151,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x8f3c4aba2f6fb9665b4765973f857e369e100e8a8a9a956790edd78b7808b6b1"
+  },
+  {
+    "id": 1,
+    "timestamp": "2026-03-15T17:52:01.868Z",
+    "agent": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+    "action": "HOLD",
+    "score": 25,
+    "price": 2098.85,
+    "reason": "RSI overbought (70.1)",
+    "rsi": 70.05899705014778,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x2ba4e052bdb246c324c0ca1aa862fba845c0d061bf37c4bf1f5f9a6afee0e29c"
+  },
+  {
+    "id": 1,
+    "timestamp": "2026-03-16T16:43:38.335Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2291.35,
+    "reason": "RSI neutral (52.4)",
+    "rsi": 52.3552411096628,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x40449e8d00e65312aeb85d23d87b02d4ab0905551bace7a4076b7d01c3ec2f30"
   }
 ]
