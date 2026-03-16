@@ -99,7 +99,9 @@ Roadmap
 [ ] Staking layer — agents put collateral behind their reputation
 Bounties
 Protocol Labs — Agents With Receipts: On-chain verifiable agent actions with ERC-8004 identity
-ENS — Agent Identity: Human-readable names for autonomous agents
+- **ENS — Agent Identity**: Human-readable names for autonomous agents. 
+  The dashboard resolves any agent's wallet address to its ENS name automatically. 
+  Agents can register `agentname.eth` and appear with their identity across the ecosystem.
 Status Network: Cross-chain reputation infrastructure
 Uniswap — Agentic Finance: Autonomous trading with on-chain audit trail
 Built at Synthesis Hackathon 2026 by @_nathcortez

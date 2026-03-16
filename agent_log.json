@@ -286,5 +286,29 @@
     "rsi": 77.79698691034865,
     "trend": "NEUTRAL",
     "onchain_tx": "0x8edf1661fbbc96c5de9712ecb05c55f1701626934bd57d16edcf34828d08a933"
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-03-16T17:56:14.740Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 25,
+    "price": 2312.81,
+    "reason": "RSI overbought (79.2)",
+    "rsi": 79.22535211267562,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x2429f670480a7426b5cd87f54baa159e9d3e7821a67e772ca44ab2f97a18ac5b"
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-03-16T18:01:15.031Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 25,
+    "price": 2315.73,
+    "reason": "RSI overbought (78.4)",
+    "rsi": 78.38499184339278,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x2a1ddcead1151ac4baec95b1a808c2aa7432954454975ca2de1a9bfee8272b8d"
   }
 ]

@@ -31,9 +31,10 @@ function actionColor(action: string) {
 export default function Home() {
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [loading, setLoading] = useState(true);
+  const [ensNames, setEnsNames] = useState<Record<string, string>>({});
 
   useEffect(() => {
-   fetch('https://raw.githubusercontent.com/nathcortez/agent-ledger/main/agent_log.json')
+    fetch('https://raw.githubusercontent.com/nathcortez/agent-ledger/main/agent_log.json')
       .then(r => r.json())
       .then(data => {
         setLogs(Array.isArray(data) ? [...data].reverse() : []);
@@ -41,6 +42,21 @@ export default function Home() {
       })
       .catch(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    const addresses = [...new Set(logs.map(l => l.agent).filter(Boolean))] as string[];
+    addresses.forEach(async (addr) => {
+      try {
+        const res = await fetch(`/api/ens?address=${addr}`);
+        const data = await res.json();
+        if (data.name) {
+          setEnsNames(prev => ({ ...prev, [addr]: data.name }));
+        }
+      } catch {
+        // no ENS name found
+      }
+    });
+  }, [logs]);
 
   const buys = logs.filter(l => l.action === 'BUY').length;
   const sells = logs.filter(l => l.action === 'SELL').length;
@@ -69,7 +85,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
             <div>
               <span className="text-gray-500">Agent Address</span>
-              <p className="text-white font-mono text-xs mt-1">{AGENT_ADDRESS}</p>
+              <p className="text-white font-mono text-xs mt-1">
+                {ensNames[AGENT_ADDRESS]
+                  ? <span className="text-purple-400 font-bold text-sm">{ensNames[AGENT_ADDRESS]}</span>
+                  : AGENT_ADDRESS}
+              </p>
+              {ensNames[AGENT_ADDRESS] && (
+                <p className="text-gray-600 font-mono text-xs mt-0.5">{AGENT_ADDRESS}</p>
+              )}
             </div>
             <div>
               <span className="text-gray-500">Contract (Sepolia)</span>
@@ -82,6 +105,18 @@ export default function Home() {
                 {CONTRACT_ADDRESS}
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* ENS Badge */}
+        <div className="bg-purple-950 border border-purple-800 rounded-xl p-4 mb-6 flex items-center gap-3">
+          <span className="text-2xl">🔷</span>
+          <div>
+            <p className="text-purple-300 font-semibold text-sm">ENS Identity Support</p>
+            <p className="text-purple-400 text-xs mt-0.5">
+              Agent addresses are automatically resolved to human-readable ENS names.
+              Register <span className="font-mono">yourname.eth</span> and it will appear here.
+            </p>
           </div>
         </div>
 
