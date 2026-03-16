@@ -33,7 +33,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/logs')
+   fetch('https://raw.githubusercontent.com/nathcortez/agent-ledger/main/agent_log.json')
       .then(r => r.json())
       .then(data => {
         setLogs(Array.isArray(data) ? [...data].reverse() : []);
