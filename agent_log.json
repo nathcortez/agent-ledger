@@ -323,5 +323,31 @@
     "trend": "NEUTRAL",
     "onchain_tx": "0xf18dad77e5a066dfdf2207c21e05bcd9d89d99fa2bf0066b56c4d773a02ded1b",
     "swap_tx": null
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-16T21:58:53.226Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2360.32,
+    "reason": "RSI neutral (65.0)",
+    "rsi": 64.9741267787838,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x1073f52bf674c681fbec631da84be04127efbf020032682620518f82e8f5f60d",
+    "swap_tx": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-16T22:03:53.214Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2364.54,
+    "reason": "RSI neutral (67.1)",
+    "rsi": 67.07566462167676,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x49c053a45130cde8daa46ba3fadbd12feeacfad5322d4a27d41cf969ed3a9d55",
+    "swap_tx": null
   }
 ]
