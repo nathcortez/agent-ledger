@@ -3,7 +3,6 @@
 > On-chain reputation infrastructure for autonomous agents.
 
 **Live Dashboard:** https://agent-ledger-alpha.vercel.app  
-**Contract (Sepolia):** `0x751BbC1f476e1e4988C8B47C1BFA31A39C6Fe237`  
 **Agent Address:** `0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf`
 
 ---
@@ -22,7 +21,7 @@ Think: **GitHub for agent behavior** — but immutable and on-chain.
 
 ## How It Works
 
-Agent runs → makes a decision (BUY/SELL/HOLD) ↓ Calls logAction() on AgentLedger smart contract ↓ Decision stored on Ethereum Sepolia (permanent, public) ↓ Dashboard reads all events → shows reputation score + history
+Agent runs → makes a decision (BUY/SELL/HOLD) ↓ Calls logAction() on AgentLedger smart contract ↓ Decision stored on-chain (permanent, public) ↓ Dashboard reads all events → shows reputation score + history
 
 
 ---
@@ -40,7 +39,7 @@ The trading agent monitors ETH price in real-time, calculates RSI, and logs ever
 | Layer | Tech |
 |-------|------|
 | Smart Contract | Solidity 0.8.24, Hardhat 3 |
-| Network | Ethereum Sepolia testnet |
+| Networks | Ethereum Sepolia + Status Network Testnet |
 | Agent | TypeScript, Node.js, ethers.js v6 |
 | Market Data | Binance public API |
 | Dashboard | Next.js 16, Tailwind CSS |
@@ -48,9 +47,15 @@ The trading agent monitors ETH price in real-time, calculates RSI, and logs ever
 
 ---
 
-## Smart Contract
+## Smart Contracts
 
-**`AgentLedger.sol`** — deployed on Sepolia at `0x751BbC1f476e1e4988C8B47C1BFA31A39C6Fe237`
+### Ethereum Sepolia
+**Address:** `0x751BbC1f476e1e4988C8B47C1BFA31A39C6Fe237`  
+[View on Etherscan](https://sepolia.etherscan.io/address/0x751BbC1f476e1e4988C8B47C1BFA31A39C6Fe237)
+
+### Status Network Testnet
+**Address:** `0x7f7752bdfdbd5d015A03d300fDE0DA51712726cc`  
+[View on Status Explorer](https://sepoliascan.status.network/address/0x7f7752bdfdbd5d015A03d300fDE0DA51712726cc)
 
 ```solidity
 function logAction(
@@ -69,6 +74,9 @@ Agent Identity (ERC-8004)
   "capabilities": ["trade", "log", "report"],
   "standard": "ERC-8004"
 }
+ENS Identity Support
+The dashboard automatically resolves agent wallet addresses to human-readable ENS names. Any agent that registers agentname.eth will appear with their ENS identity across the ecosystem — making agents discoverable, trustworthy, and human-readable.
+
 Run Locally
 # Clone
 git clone https://github.com/nathcortez/agent-ledger
@@ -99,10 +107,7 @@ Roadmap
 [ ] Staking layer — agents put collateral behind their reputation
 Bounties
 Protocol Labs — Agents With Receipts: On-chain verifiable agent actions with ERC-8004 identity
-- **ENS — Agent Identity**: Human-readable names for autonomous agents. 
-  The dashboard resolves any agent's wallet address to its ENS name automatically. 
-  Agents can register `agentname.eth` and appear with their identity across the ecosystem.
-Status Network: Cross-chain reputation infrastructure
-Uniswap — Agentic Finance: Autonomous trading with on-chain audit trail
+ENS — Agent Identity: Dashboard resolves wallet addresses to ENS names automatically. Agents can register agentname.eth and appear with their identity across the ecosystem.
+Status Network: AgentLedger deployed on Status Network Testnet at 0x7f7752bdfdbd5d015A03d300fDE0DA51712726cc — cross-chain reputation infrastructure.
+Uniswap — Agentic Finance: Autonomous trading agent with on-chain audit trail for every decision.
 Built at Synthesis Hackathon 2026 by @_nathcortez
-

@@ -5,11 +5,21 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.24",
+  solidity: {
+    version: "0.8.24",
+    settings: {
+      evmVersion: "paris"
+    }
+  },
   networks: {
     sepolia: {
       type: "http",
-      url: process.env.SEPOLIA_RPC_URL || "https://rpc.sepolia.org",
+      url: process.env.SEPOLIA_RPC_URL || "https://ethereum-sepolia-rpc.publicnode.com",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
+    status: {
+      type: "http",
+      url: "https://public.sepolia.rpc.status.network",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
     },
   },
