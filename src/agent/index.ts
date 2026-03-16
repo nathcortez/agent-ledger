@@ -1,5 +1,6 @@
 import { fetchCandles, analyzeSignals, Signal } from './signals';
 import { getAgentAddress } from '../blockchain/client';
+import { swapETHforUSDC } from '../swap';
 import * as fs from 'fs';
 import * as dotenv from 'dotenv';
 dotenv.config();
@@ -7,7 +8,7 @@ dotenv.config();
 import { logActionOnchain } from './logOnchain';
 
 const LOG_FILE = 'agent_log.json';
-const INTERVAL_MS = 5 * 60 * 1000; // 5 minutos
+const INTERVAL_MS = 5 * 60 * 1000;
 
 interface LogEntry {
   id: number;
@@ -20,6 +21,7 @@ interface LogEntry {
   rsi: number;
   trend: string;
   onchain_tx: string | null;
+  swap_tx: string | null;
 }
 
 function loadLog(): LogEntry[] {
@@ -37,7 +39,7 @@ function saveLog(entries: LogEntry[]): void {
 
 async function runCycle(cycleId: number): Promise<void> {
   console.log(`\n🤖 [AgentLedger] Cycle #${cycleId} — ${new Date().toISOString()}`);
-  
+
   const candles = await fetchCandles('ETHUSDT', '5m', 100);
   const signal: Signal = analyzeSignals(candles);
   const agentAddress = getAgentAddress();
@@ -58,10 +60,11 @@ async function runCycle(cycleId: number): Promise<void> {
     reason: signal.reason,
     rsi: signal.rsi,
     trend: signal.trend,
-    onchain_tx: null, // se llenará cuando deployemos el contrato
+    onchain_tx: null,
+    swap_tx: null,
   };
 
-// Log onchain
+  // Log onchain
   let txHash: string | null = null;
   try {
     txHash = await logActionOnchain(
@@ -71,9 +74,23 @@ async function runCycle(cycleId: number): Promise<void> {
       signal.rsi
     );
   } catch (e) {
-    console.log('⚠️ Onchain log failed (node not running?)');
+    console.log('⚠️ Onchain log failed');
   }
   entry.onchain_tx = txHash;
+
+  // Execute swap on BUY signal
+  if (signal.action === 'BUY') {
+    console.log('💱 BUY signal — executing Uniswap V3 swap...');
+    try {
+      const swapTx = await swapETHforUSDC('0.00005');
+      entry.swap_tx = swapTx;
+      if (swapTx) {
+        console.log(`✅ Swap executed: https://sepolia.etherscan.io/tx/${swapTx}`);
+      }
+    } catch (e) {
+      console.log('⚠️ Swap failed, continuing...');
+    }
+  }
 
   const log = loadLog();
   log.push(entry);
@@ -84,16 +101,13 @@ async function runCycle(cycleId: number): Promise<void> {
 
 async function main(): Promise<void> {
   console.log('🚀 AgentLedger starting...');
-  console.log('🔗 Network: Base Sepolia');
+  console.log('🔗 Network: Ethereum Sepolia');
   console.log('📡 Data source: Binance API');
-  console.log('⏱️  Interval: 5 minutes\n');
+  console.log('⏱️ Interval: 5 minutes\n');
 
   let cycleId = 1;
-  
-  // Primera ejecución inmediata
   await runCycle(cycleId++);
-  
-  // Loop cada 5 minutos
+
   setInterval(async () => {
     await runCycle(cycleId++);
   }, INTERVAL_MS);

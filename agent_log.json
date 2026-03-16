@@ -310,5 +310,18 @@
     "rsi": 78.38499184339278,
     "trend": "NEUTRAL",
     "onchain_tx": "0x2a1ddcead1151ac4baec95b1a808c2aa7432954454975ca2de1a9bfee8272b8d"
+  },
+  {
+    "id": 1,
+    "timestamp": "2026-03-16T21:53:52.209Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 25,
+    "price": 2363.52,
+    "reason": "RSI overbought (70.9)",
+    "rsi": 70.93371122657824,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0xf18dad77e5a066dfdf2207c21e05bcd9d89d99fa2bf0066b56c4d773a02ded1b",
+    "swap_tx": null
   }
 ]
