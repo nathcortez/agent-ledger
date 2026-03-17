@@ -1,43 +1,44 @@
-import { ethers } from 'ethers';
-import * as dotenv from 'dotenv';
+﻿import { ethers } from "ethers";
+import * as dotenv from "dotenv";
+import { fileURLToPath } from "url";
 dotenv.config();
 
-// Uniswap V3 on Sepolia
-const SWAP_ROUTER = '0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E';
-const WETH       = '0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14';
-const USDC       = '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238';
+const UNISWAP_API = "https://trade-api.gateway.uniswap.org/v1/quote";
+const NATIVE_ETH = "0x0000000000000000000000000000000000000000";
+const USDC_MAINNET = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
 
-const ROUTER_ABI = [
-  'function exactInputSingle((address tokenIn, address tokenOut, uint24 fee, address recipient, uint256 amountIn, uint256 amountOutMinimum, uint160 sqrtPriceLimitX96)) external payable returns (uint256 amountOut)'
-];
+export async function getUniswapQuote(walletAddress: string, amountEth: string = "0.0001"): Promise<any> {
+  const amountIn = ethers.parseEther(amountEth).toString();
+  console.log("Calling Uniswap Trade API...");
+  const res = await fetch(UNISWAP_API, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.UNISWAP_API_KEY!,
+      "x-universal-router-version": "2.0"
+    },
+    body: JSON.stringify({
+      type: "EXACT_INPUT",
+      amount: amountIn,
+      tokenInChainId: 1,
+      tokenOutChainId: 1,
+      tokenIn: NATIVE_ETH,
+      tokenOut: USDC_MAINNET,
+      swapper: walletAddress,
+      autoSlippage: "DEFAULT",
+      routingPreference: "BEST_PRICE",
+      urgency: "urgent"
+    })
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(`Uniswap API error ${res.status}: ${JSON.stringify(data)}`);
+  return data;
+}
 
-export async function swapETHforUSDC(amountEth: string = '0.0001'): Promise<string | null> {
-  try {
-   const provider = new ethers.JsonRpcProvider(
-  process.env.SEPOLIA_RPC_URL || 'https://ethereum-sepolia-rpc.publicnode.com'
-);
-    const wallet = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
-    const router = new ethers.Contract(SWAP_ROUTER, ROUTER_ABI, wallet);
-
-    const amountIn = ethers.parseEther(amountEth);
-
-    const params = {
-      tokenIn: WETH,
-      tokenOut: USDC,
-      fee: 3000,
-      recipient: wallet.address,
-      amountIn: amountIn,
-      amountOutMinimum: 0,
-      sqrtPriceLimitX96: 0
-    };
-
-    console.log(`🔄 Swapping ${amountEth} ETH → USDC on Uniswap V3...`);
-    const tx = await router.exactInputSingle(params, { value: amountIn });
-    const receipt = await tx.wait();
-    console.log(`✅ Swap TxHash: ${receipt.hash}`);
-    return receipt.hash;
-  } catch (err: any) {
-    console.error('⚠️ Swap failed:', err.shortMessage || err.message);
-    return null;
-  }
+const isMain = process.argv[1] === fileURLToPath(import.meta.url);
+if (isMain) {
+  const testWallet = "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045";
+  getUniswapQuote(testWallet, "0.0001")
+    .then(data => { console.log("Quote received!"); console.log(JSON.stringify(data, null, 2)); })
+    .catch(err => console.error("Error:", err.message));
 }
