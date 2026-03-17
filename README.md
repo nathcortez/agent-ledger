@@ -22,14 +22,11 @@ AgentLedger is a public infrastructure layer that lets any autonomous agent log 
 
 ## How It Works
 
-Agent runs → analyzes market data (Binance API + RSI) → makes decision (BUY/SELL/HOLD) → calls logAction() on AgentLedger smart contract → decision stored on-chain (permanent, public) → Dashboard reads events → shows reputation score + history
-
+Agent runs → analyzes market data (Binance API + RSI) → makes decision (BUY/SELL/HOLD) → calls `logAction()` on AgentLedger smart contract → decision stored on-chain (permanent, public) → Dashboard reads events → shows reputation score + history
 
 ---
 
-## Live Demo
-
-→ **[View Dashboard](https://agent-ledger-alpha.vercel.app)**
+## Live Demo → **[View Dashboard](https://agent-ledger-alpha.vercel.app)**
 
 The trading agent monitors ETH price in real-time, calculates RSI, and logs every decision on-chain with a verified TxHash.
 
@@ -49,10 +46,10 @@ The trading agent monitors ETH price in real-time, calculates RSI, and logs ever
 
 ```solidity
 function logAction(
-    address agentId,
-    string memory action,   // "BUY" | "SELL" | "HOLD"
-    uint256 price,          // ETH price in USD (×100)
-    uint256 rsi             // RSI value (×100)
+  address agentId,
+  string memory action,  // "BUY" | "SELL" | "HOLD"
+  uint256 price,         // ETH price in USD (×100)
+  uint256 rsi            // RSI value (×100)
 ) external
 Tech Stack
 | Layer | Tech | |-------|------| | Smart Contract | Solidity 0.8.24, Hardhat 3 | | Networks | Ethereum Sepolia + Status Network Testnet | | Agent | TypeScript, Node.js, ethers.js v6 | | Market Data | Binance public API | | Dashboard | Next.js 16, Tailwind CSS | | Deploy | Vercel |
@@ -64,6 +61,12 @@ Agent Identity (ERC-8004)
   "participantId": "2119d56555a044e694e17fa9e9a6ff3b",
   "registrationTxn": "0x235511b0ff66a9b6073fc98892239adc807cc2ccfda3fd181e4adbbb9e01f09e"
 }
+Status Network Gasless Transaction
+TxHash: 0xaf1ff7e6597cc904324110317c11f5d0e5d036df9ca307d8d58772feafd1d0de
+gasPrice: 0 (gasless ✅)
+Status: SUCCESS ✅
+Network: Status Network Sepolia
+Explorer: https://sepoliascan.status.network/tx/0xaf1ff7e6597cc904324110317c11f5d0e5d036df9ca307d8d58772feafd1d0de
 🛡️ Safety & Guardrails
 The agent includes multiple safety mechanisms to prevent runaway behavior:
 
@@ -94,7 +97,7 @@ cp .env.example .env
 # Add PRIVATE_KEY and SEPOLIA_RPC_URL
 
 # Run agent
-npx tsx src/agent.ts
+npx tsx src/agent/index.ts
 
 # Run dashboard
 cd agent-ledger-dashboard
@@ -104,10 +107,7 @@ Reputation Score
 Each agent gets a score based on the % of decisions logged on-chain vs total decisions. A score of 100% means full transparency — every action is publicly verifiable.
 
 🏆 Bounty Coverage
-| Bounty | Why We Qualify | |--------|---------------| | Protocol Labs — Let the Agent Cook ($8,000) | Full autonomous loop: fetch → analyze → decide → log onchain. Real ERC-8004 identity. agent.json + agent_log.json with 30+ real TxHashes. Safety guardrails documented. | | Protocol Labs — Agents With Receipts ($8,004) | ERC-8004 identity registered on Base Mainnet. Every decision logged onchain. Verifiable via Etherscan. DevSpot compatible with agent.json + agent_log.json. | | Status Network ($2,000) | AgentLedger deployed on Status Network Testnet at 0x7f7752bdfdbd5d015A03d300fDE0DA51712726cc. Agent logs decisions cross-chain. AI agent component + onchain proof. | | Synthesis Open Track ($14,500) | Technically coherent agent system with real-world utility, cross-sponsor compatibility (identity + execution + reputation). |
-| Uniswap — Agentic Finance | Real ETH→USDC swap on Sepolia via Uniswap v3 + API key integration. [TxHash](https://sepolia.etherscan.io/tx/0xf91842a53ebd610e5c93d0d46e044b6adbf95a90bd230581a26a067e0ccc6662) |
-| Status Network ($2,000) | Contract deployed + **gasless tx (gasPrice=0)** confirmed. [Gasless TxHash](https://sepoliascan.status.network/tx/0x3fb9696297e15f820d5adc3705cc33b504cb564c97a27dcc0fbde26f2ccb2bc9) |
-
+| Bounty | Why We Qualify | |--------|----------------| | Protocol Labs — Let the Agent Cook ($8,000) | Full autonomous loop: fetch → analyze → decide → log onchain. Real ERC-8004 identity. agent.json + agent_log.json with 30+ real TxHashes. Safety guardrails documented. | | Protocol Labs — Agents With Receipts ($8,004) | ERC-8004 identity registered on Base Mainnet. Every decision logged onchain. Verifiable via Etherscan. DevSpot compatible with agent.json + agent_log.json. | | Status Network ($2,000) | Contract deployed on Status Network Testnet. Agent logs decisions cross-chain. Gasless tx (gasPrice=0) confirmed — TxHash. | | Synthesis Open Track ($25,000) | Technically coherent agent system with real-world utility, cross-sponsor compatibility (identity + execution + reputation). | | Uniswap — Agentic Finance | Real ETH→USDC swap on Sepolia via Uniswap v3 + API key integration. TxHash |
 
 Roadmap
 [ ] Multi-agent explorer (search any agent by address)
