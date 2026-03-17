@@ -106,6 +106,7 @@ Each agent gets a score based on the % of decisions logged on-chain vs total dec
 🏆 Bounty Coverage
 | Bounty | Why We Qualify | |--------|---------------| | Protocol Labs — Let the Agent Cook ($8,000) | Full autonomous loop: fetch → analyze → decide → log onchain. Real ERC-8004 identity. agent.json + agent_log.json with 30+ real TxHashes. Safety guardrails documented. | | Protocol Labs — Agents With Receipts ($8,004) | ERC-8004 identity registered on Base Mainnet. Every decision logged onchain. Verifiable via Etherscan. DevSpot compatible with agent.json + agent_log.json. | | Status Network ($2,000) | AgentLedger deployed on Status Network Testnet at 0x7f7752bdfdbd5d015A03d300fDE0DA51712726cc. Agent logs decisions cross-chain. AI agent component + onchain proof. | | Synthesis Open Track ($14,500) | Technically coherent agent system with real-world utility, cross-sponsor compatibility (identity + execution + reputation). |
 | Uniswap — Agentic Finance | Real ETH→USDC swap on Sepolia via Uniswap v3 + API key integration. [TxHash](https://sepolia.etherscan.io/tx/0xf91842a53ebd610e5c93d0d46e044b6adbf95a90bd230581a26a067e0ccc6662) |
+| Status Network ($2,000) | Contract deployed + **gasless tx (gasPrice=0)** confirmed. [Gasless TxHash](https://sepoliascan.status.network/tx/0x3fb9696297e15f820d5adc3705cc33b504cb564c97a27dcc0fbde26f2ccb2bc9) |
 
 
 Roadmap
