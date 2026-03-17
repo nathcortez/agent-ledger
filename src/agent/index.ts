@@ -1,6 +1,6 @@
 import { fetchCandles, analyzeSignals, Signal } from './signals';
 import { getAgentAddress } from '../blockchain/client';
-import { swapETHforUSDC } from '../swap';
+// import { swapOnSepolia as swapETHforUSDC } from '../swap-execute';
 import * as fs from 'fs';
 import * as dotenv from 'dotenv';
 dotenv.config();
@@ -79,18 +79,18 @@ async function runCycle(cycleId: number): Promise<void> {
   entry.onchain_tx = txHash;
 
   // Execute swap on BUY signal
-  if (signal.action === 'BUY') {
-    console.log('💱 BUY signal — executing Uniswap V3 swap...');
-    try {
-      const swapTx = await swapETHforUSDC('0.00005');
-      entry.swap_tx = swapTx;
-      if (swapTx) {
-        console.log(`✅ Swap executed: https://sepolia.etherscan.io/tx/${swapTx}`);
-      }
-    } catch (e) {
-      console.log('⚠️ Swap failed, continuing...');
-    }
-  }
+  // if (signal.action === 'BUY') {
+    //console.log('💱 BUY signal — executing Uniswap V3 swap...');
+    //try {
+    //  const swapTx = await swapETHforUSDC('0.00005');
+     // entry.swap_tx = swapTx;
+     // if (swapTx) {
+      //  console.log(`✅ Swap executed: https://sepolia.etherscan.io/tx/${swapTx}`);
+     // }
+    //} catch (e) {
+    //  console.log('⚠️ Swap failed, continuing...');
+  //  }
+  //}
 
   const log = loadLog();
   log.push(entry);
