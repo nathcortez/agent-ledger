@@ -4,14 +4,14 @@
   "description": "Autonomous trading agent with verifiable onchain reputation and decision logs",
   "identity": {
     "standard": "ERC-8004",
-    "chain": "base-sepolia",
-    "operator": "PENDING_WALLET_ADDRESS"
+    "chain": "ethereum-sepolia",
+    "operator": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7"
   },
   "capabilities": [
     "market-analysis",
     "signal-generation",
     "onchain-logging",
-    "autonomous-trading"
+    "autonomous-decision"
   ],
   "tools": [
     {
@@ -20,16 +20,20 @@
       "type": "api"
     },
     {
-      "name": "decision-logger",
-      "description": "Logs trading decisions to Base Sepolia blockchain",
-      "type": "blockchain"
+      "name": "rsi-calculator",
+      "description": "Calculates RSI indicator from price history",
+      "type": "computation"
     },
     {
-      "name": "uniswap-executor",
-      "description": "Executes swaps on Uniswap v3 Base Sepolia",
-      "type": "defi"
+      "name": "decision-logger",
+      "description": "Logs trading decisions to Ethereum Sepolia blockchain via AgentLedger contract",
+      "type": "blockchain"
     }
   ],
+  "contracts": {
+    "ethereum-sepolia": "0x751BbC1f476e1e4988C8B47C1BFA31A39C6Fe237",
+    "status-network-testnet": "0x7f7752bdfdbd5d015A03d300fDE0DA51712726cc"
+  },
   "safety": {
     "max_position_size_usd": 100,
     "allowed_pairs": ["ETH/USDC"],
