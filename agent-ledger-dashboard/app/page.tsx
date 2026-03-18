@@ -130,12 +130,11 @@ export default function Home() {
                 <span className="text-2xl">🧠</span>
                 <h2 className="text-lg font-bold text-white">Proof of Cognition</h2>
               </div>
-              {/* ✅ CAMBIO 1: framing más preciso, sin overclaim */}
               <p className="text-gray-400 text-sm max-w-xl">
                 AgentLedger doesn't just log <em>what</em> the agent did —
-                it logs the <em>signals</em> that triggered the decision. Every BUY/SELL/HOLD
-                is stamped with its input data (RSI value, price, trend) on-chain before execution —
-                creating an auditable decision trail for any autonomous agent.
+                it logs the <em>signals</em> that triggered the decision, creating an auditable
+                decision trail for any autonomous agent. In this implementation: RSI value,
+                price momentum, and trend direction — all stamped on-chain before execution.
               </p>
               <p className="text-purple-400/80 text-xs mt-2 font-mono">
                 Agent Identity: ERC-8004 ✅ &nbsp;|&nbsp; Operator: {AGENT_ADDRESS.slice(0,8)}...{AGENT_ADDRESS.slice(-6)}
@@ -187,11 +186,11 @@ export default function Home() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
           {[
-            { label: 'Total Decisions', value: logs.length,  color: 'text-white',    icon: '📊' },
-            { label: 'BUY Signals',    value: buys,          color: 'text-green-400', icon: '🟢' },
-            { label: 'SELL Signals',   value: sells,         color: 'text-red-400',   icon: '🔴' },
-            { label: 'HOLD Signals',   value: holds,         color: 'text-yellow-400',icon: '🟡' },
-            { label: 'Uniswap Swaps',  value: swaps,         color: 'text-blue-400',  icon: '💱' },
+            { label: 'Total Decisions', value: logs.length,  color: 'text-white',     icon: '📊' },
+            { label: 'BUY Signals',     value: buys,          color: 'text-green-400', icon: '🟢' },
+            { label: 'SELL Signals',    value: sells,         color: 'text-red-400',   icon: '🔴' },
+            { label: 'HOLD Signals',    value: holds,         color: 'text-yellow-400',icon: '🟡' },
+            { label: 'Uniswap Swaps',   value: swaps,         color: 'text-blue-400',  icon: '💱' },
           ].map(stat => (
             <div key={stat.label} className="bg-gray-900/50 rounded-xl p-3 border border-gray-800 text-center">
               <p className="text-lg mb-0.5">{stat.icon}</p>
@@ -272,7 +271,6 @@ export default function Home() {
           <div className="p-5 border-b border-gray-800 flex items-center justify-between">
             <div>
               <h2 className="font-semibold text-white">🧠 Cognition Ledger</h2>
-              {/* ✅ CAMBIO 2: subtitle más preciso */}
               <p className="text-gray-500 text-xs">
                 Every decision logged on-chain · verified on Etherscan · full input signals preserved immutably
               </p>
