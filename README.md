@@ -61,6 +61,13 @@ Agent Identity (ERC-8004)
   "participantId": "2119d56555a044e694e17fa9e9a6ff3b",
   "registrationTxn": "0x235511b0ff66a9b6073fc98892239adc807cc2ccfda3fd181e4adbbb9e01f09e"
 }
+ERC-8004 Registry Coverage
+AgentLedger implements the full ERC-8004 trust framework across three registry layers:
+
+| Registry | Implementation | Proof | |----------|---------------|-------| | Identity Registry | Agent registered on Base Mainnet with operator wallet 0xDfa9...68C7 | View on BaseScan | | Reputation Registry | On-chain transparency score — ratio of decisions logged vs total decisions (86%). Every cycle updates agent reputation immutably. | Live Dashboard | | Validation Registry | Every logAction() call is a validation receipt: agent ID + decision + RSI reasoning + timestamp — cryptographic proof stored before any action is taken. | Contract on Etherscan |
+
+AgentLedger unifies all three ERC-8004 registry patterns in a single smart contract: who the agent is (Identity), how trustworthy it has been (Reputation), and proof of what it decided (Validation).
+
 Status Network Gasless Transaction
 TxHash: 0xaf1ff7e6597cc904324110317c11f5d0e5d036df9ca307d8d58772feafd1d0de
 gasPrice: 0 (gasless ✅)
@@ -107,7 +114,7 @@ Reputation Score
 Each agent gets a score based on the % of decisions logged on-chain vs total decisions. A score of 100% means full transparency — every action is publicly verifiable.
 
 🏆 Bounty Coverage
-| Bounty | Why We Qualify | |--------|----------------| | Protocol Labs — Let the Agent Cook ($8,000) | Full autonomous loop: fetch → analyze → decide → log onchain. Real ERC-8004 identity. agent.json + agent_log.json with 30+ real TxHashes. Safety guardrails documented. | | Protocol Labs — Agents With Receipts ($8,004) | ERC-8004 identity registered on Base Mainnet. Every decision logged onchain. Verifiable via Etherscan. DevSpot compatible with agent.json + agent_log.json. | | Status Network ($2,000) | Contract deployed on Status Network Testnet. Agent logs decisions cross-chain. Gasless tx (gasPrice=0) confirmed — TxHash. | | Synthesis Open Track ($25,000) | Technically coherent agent system with real-world utility, cross-sponsor compatibility (identity + execution + reputation). | | Uniswap — Agentic Finance | Real ETH→USDC swap on Sepolia via Uniswap v3 + API key integration. TxHash |
+| Bounty | Why We Qualify | |--------|----------------| | Protocol Labs — Let the Agent Cook ($8,000) | Full autonomous loop: fetch → analyze → decide → log onchain. Real ERC-8004 identity. agent.json + agent_log.json with 50+ real TxHashes. Safety guardrails documented. | | Protocol Labs — Agents With Receipts ($8,004) | ERC-8004 identity registered on Base Mainnet. All 3 registry layers covered (Identity + Reputation + Validation). DevSpot compatible with agent.json + agent_log.json. | | Status Network ($2,000) | Contract deployed on Status Network Testnet. Agent logs decisions cross-chain. Gasless tx (gasPrice=0) confirmed — TxHash. | | Synthesis Open Track ($25,000) | Technically coherent agent system with real-world utility, cross-sponsor compatibility (identity + execution + reputation). | | Uniswap — Agentic Finance | Real ETH→USDC swap on Sepolia via Uniswap v3 + API key integration. TxHash |
 
 Roadmap
 [ ] Multi-agent explorer (search any agent by address)
