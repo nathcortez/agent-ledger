@@ -68,30 +68,24 @@ AgentLedger implements the full ERC-8004 trust framework across three registry l
 
 AgentLedger unifies all three ERC-8004 registry patterns in a single smart contract: who the agent is (Identity), how trustworthy it has been (Reputation), and proof of what it decided (Validation).
 
-Status Network Gasless Transaction
-TxHash: 0xaf1ff7e6597cc904324110317c11f5d0e5d036df9ca307d8d58772feafd1d0de
+Status Network — Gasless Transaction
+TxHash:   0xaf1ff7e6597cc904324110317c11f5d0e5d036df9ca307d8d58772feafd1d0de
 gasPrice: 0 (gasless ✅)
-Status: SUCCESS ✅
-Network: Status Network Sepolia
-Explorer: https://sepoliascan.status.network/tx/0xaf1ff7e6597cc904324110317c11f5d0e5d036df9ca307d8d58772feafd1d0de
+Status:   SUCCESS ✅
+Network:  Status Network Sepolia
+View on Explorer
 
-
-## 💱 Uniswap Integration — Agentic Finance
-
+💱 Uniswap Integration — Agentic Finance
 AgentLedger integrates the Uniswap Developer Platform API as the execution layer for autonomous BUY decisions. When the agent's RSI analysis signals a confirmed uptrend, it executes a real ETH→USDC swap without human intervention.
 
-- **API Key:** Uniswap Developer Platform (real key, not mocked)
-- **Protocol:** Uniswap v3 via Trading API `/v2/quote`
-- **Swap TxHash:** [`0xf91842a5...`](https://sepolia.etherscan.io/tx/0xf91842a53ebd610e5c93d0d46e044b6adbf95a90bd230581a26a067e0ccc6662)
-- **Pair:** ETH → USDC on Ethereum Sepolia
-- **Execution:** Fully autonomous — triggered by RSI Uptrend signal, no human click required
-
+API Key: Uniswap Developer Platform (real key, not mocked)
+Protocol: Uniswap v3 via Trading API /v2/quote
+Swap TxHash: 0xf91842a5...
+Pair: ETH → USDC on Ethereum Sepolia
+Execution: Fully autonomous — triggered by RSI Uptrend signal, no human click required
 Agent decision loop: RSI > 60 + Uptrend detected → Uniswap API quote fetched → methodParameters signed by agent wallet → swap executed via wallet.sendTransaction() → TxHash logged onchain as proof of execution
 
-
-This is agentic finance: the agent doesn't just hold tokens — it **decides** when to trade based on market signals and **executes** the swap autonomously with a cryptographic receipt.
-
----
+This is agentic finance: the agent doesn't just hold tokens — it decides when to trade based on market signals and executes the swap autonomously with a cryptographic receipt.
 
 🛡️ Safety & Guardrails
 The agent includes multiple safety mechanisms to prevent runaway behavior:
@@ -135,10 +129,22 @@ Each agent gets a score based on the % of decisions logged on-chain vs total dec
 🏆 Bounty Coverage
 | Bounty | Why We Qualify | |--------|----------------| | Protocol Labs — Let the Agent Cook ($8,000) | Full autonomous loop: fetch → analyze → decide → log onchain. Real ERC-8004 identity. agent.json + agent_log.json with 50+ real TxHashes. Safety guardrails documented. | | Protocol Labs — Agents With Receipts ($8,004) | ERC-8004 identity registered on Base Mainnet. All 3 registry layers covered (Identity + Reputation + Validation). DevSpot compatible with agent.json + agent_log.json. | | Status Network ($2,000) | Contract deployed on Status Network Testnet. Agent logs decisions cross-chain. Gasless tx (gasPrice=0) confirmed — TxHash. | | Synthesis Open Track ($25,000) | Technically coherent agent system with real-world utility, cross-sponsor compatibility (identity + execution + reputation). | | Uniswap — Agentic Finance | Real ETH→USDC swap on Sepolia via Uniswap v3 + API key integration. TxHash |
 
+🤖 Ecosystem Fit — Why AgentLedger Matters for Every Agent
+AgentLedger is not a trading bot. It is an accountability layer for autonomous agents.
+
+Any agent — whether built with Olas, LangChain, or custom TypeScript — can use AgentLedger to log its decisions on-chain before execution.
+
+Use Cases Beyond Trading
+| Agent Type | What AgentLedger Logs | Benefit | |---|---|---| | DeFi Trading Agent (Olas, Bankr) | RSI signals, BUY/SELL/HOLD decisions | Auditable strategy, no black box | | NFT Minting Agent (SuperRare) | Rarity scores, mint/skip decisions | Provable curation logic | | Governance Agent (Octant, ENS) | Vote reasoning, proposal analysis | On-chain accountability for DAO agents | | Yield Optimizer (Lido, Celo) | APY comparisons, rebalance triggers | Transparent reallocation rationale | | Marketplace Agent (Olas Mech) | Request routing, tool selection | Verifiable agent-to-agent hiring logic |
+
+Alignment with Olas
+AgentLedger's architecture naturally complements the Olas Mech Marketplace: agents that hire or serve requests on Olas can use AgentLedger to log every decision step, creating a full Proof of Cognition trail for multi-agent workflows.
+
 Roadmap
 [ ] Multi-agent explorer (search any agent by address)
 [ ] ENS integration (human-readable agent names)
 [ ] Cross-chain support (Base, Arbitrum)
 [ ] SDK for easy integration (npm install agentledger-sdk)
 [ ] Staking layer — agents put collateral behind their reputation
+[ ] Olas Mech integration — AgentLedger as accountability middleware for Olas agents
 Built at Synthesis Hackathon 2026 by @_nathcortez
