@@ -10,23 +10,13 @@
     "rsi": 67.04026567040263,
     "trend": "NEUTRAL",
     "onchain_tx": null,
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": false
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": false }
     ],
     "retries": 0,
-    "output": {
-      "txHash": null,
-      "verified": false
-    }
+    "output": { "txHash": null, "verified": false }
   },
   {
     "id": 2,
@@ -39,23 +29,13 @@
     "rsi": 62.160254147546375,
     "trend": "NEUTRAL",
     "onchain_tx": null,
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": false
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": false }
     ],
     "retries": 0,
-    "output": {
-      "txHash": null,
-      "verified": false
-    }
+    "output": { "txHash": null, "verified": false }
   },
   {
     "id": 3,
@@ -68,23 +48,13 @@
     "rsi": 62.52602359472546,
     "trend": "NEUTRAL",
     "onchain_tx": null,
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": false
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": false }
     ],
     "retries": 0,
-    "output": {
-      "txHash": null,
-      "verified": false
-    }
+    "output": { "txHash": null, "verified": false }
   },
   {
     "id": 4,
@@ -97,23 +67,13 @@
     "rsi": 65.04727746984,
     "trend": "NEUTRAL",
     "onchain_tx": null,
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": false
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": false }
     ],
     "retries": 0,
-    "output": {
-      "txHash": null,
-      "verified": false
-    }
+    "output": { "txHash": null, "verified": false }
   },
   {
     "id": 5,
@@ -126,23 +86,13 @@
     "rsi": 67.22983742429045,
     "trend": "NEUTRAL",
     "onchain_tx": null,
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": false
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": false }
     ],
     "retries": 0,
-    "output": {
-      "txHash": null,
-      "verified": false
-    }
+    "output": { "txHash": null, "verified": false }
   },
   {
     "id": 6,
@@ -155,23 +105,13 @@
     "rsi": 67.49920961112862,
     "trend": "NEUTRAL",
     "onchain_tx": null,
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": false
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": false }
     ],
     "retries": 0,
-    "output": {
-      "txHash": null,
-      "verified": false
-    }
+    "output": { "txHash": null, "verified": false }
   },
   {
     "id": 1,
@@ -184,23 +124,13 @@
     "rsi": 27.02702702702706,
     "trend": "NEUTRAL",
     "onchain_tx": "0x9adf693b39f6f28806aaa4799199451b03a4b805e1ce057120ecf580a3ed99b7",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x9adf693b39f6f28806aaa4799199451b03a4b805e1ce057120ecf580a3ed99b7",
-      "verified": true
-    }
+    "output": { "txHash": "0x9adf693b39f6f28806aaa4799199451b03a4b805e1ce057120ecf580a3ed99b7", "verified": true }
   },
   {
     "id": 1,
@@ -213,23 +143,13 @@
     "rsi": 25.57972746832459,
     "trend": "NEUTRAL",
     "onchain_tx": "0x2557c52c55d126a060f66b4044d7eb69af594b86b83439db18e0142b77b1d7e1",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x2557c52c55d126a060f66b4044d7eb69af594b86b83439db18e0142b77b1d7e1",
-      "verified": true
-    }
+    "output": { "txHash": "0x2557c52c55d126a060f66b4044d7eb69af594b86b83439db18e0142b77b1d7e1", "verified": true }
   },
   {
     "id": 2,
@@ -242,23 +162,13 @@
     "rsi": 23.78588387653788,
     "trend": "NEUTRAL",
     "onchain_tx": "0x97237ad7a3bde604a75409bc4cc24e3912084a416f291efc7e5358a276f95588",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x97237ad7a3bde604a75409bc4cc24e3912084a416f291efc7e5358a276f95588",
-      "verified": true
-    }
+    "output": { "txHash": "0x97237ad7a3bde604a75409bc4cc24e3912084a416f291efc7e5358a276f95588", "verified": true }
   },
   {
     "id": 3,
@@ -271,23 +181,13 @@
     "rsi": 22.135523613962604,
     "trend": "NEUTRAL",
     "onchain_tx": "0x9a1113b288d418ee45628d4c9479b1d18acf994514240408420b89eacef08e5e",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x9a1113b288d418ee45628d4c9479b1d18acf994514240408420b89eacef08e5e",
-      "verified": true
-    }
+    "output": { "txHash": "0x9a1113b288d418ee45628d4c9479b1d18acf994514240408420b89eacef08e5e", "verified": true }
   },
   {
     "id": 4,
@@ -300,23 +200,13 @@
     "rsi": 33.52429450456151,
     "trend": "NEUTRAL",
     "onchain_tx": "0x8f3c4aba2f6fb9665b4765973f857e369e100e8a8a9a956790edd78b7808b6b1",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x8f3c4aba2f6fb9665b4765973f857e369e100e8a8a9a956790edd78b7808b6b1",
-      "verified": true
-    }
+    "output": { "txHash": "0x8f3c4aba2f6fb9665b4765973f857e369e100e8a8a9a956790edd78b7808b6b1", "verified": true }
   },
   {
     "id": 1,
@@ -329,23 +219,13 @@
     "rsi": 70.05899705014778,
     "trend": "NEUTRAL",
     "onchain_tx": "0x2ba4e052bdb246c324c0ca1aa862fba845c0d061bf37c4bf1f5f9a6afee0e29c",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x2ba4e052bdb246c324c0ca1aa862fba845c0d061bf37c4bf1f5f9a6afee0e29c",
-      "verified": true
-    }
+    "output": { "txHash": "0x2ba4e052bdb246c324c0ca1aa862fba845c0d061bf37c4bf1f5f9a6afee0e29c", "verified": true }
   },
   {
     "id": 1,
@@ -358,23 +238,13 @@
     "rsi": 52.3552411096628,
     "trend": "NEUTRAL",
     "onchain_tx": "0x40449e8d00e65312aeb85d23d87b02d4ab0905551bace7a4076b7d01c3ec2f30",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x40449e8d00e65312aeb85d23d87b02d4ab0905551bace7a4076b7d01c3ec2f30",
-      "verified": true
-    }
+    "output": { "txHash": "0x40449e8d00e65312aeb85d23d87b02d4ab0905551bace7a4076b7d01c3ec2f30", "verified": true }
   },
   {
     "id": 2,
@@ -387,23 +257,13 @@
     "rsi": 51.87362233651728,
     "trend": "NEUTRAL",
     "onchain_tx": "0x8e0e48edca45c72efa0a3f267c28a00da517a8c1e2cabf7d4ed2af642f0f6125",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x8e0e48edca45c72efa0a3f267c28a00da517a8c1e2cabf7d4ed2af642f0f6125",
-      "verified": true
-    }
+    "output": { "txHash": "0x8e0e48edca45c72efa0a3f267c28a00da517a8c1e2cabf7d4ed2af642f0f6125", "verified": true }
   },
   {
     "id": 3,
@@ -416,22 +276,17 @@
     "rsi": 60.82598928633188,
     "trend": "BULLISH",
     "onchain_tx": "0x0a640860f806f78dc259c0335558b6b67248817ae38b8a4e1058edfce54db957",
+    "swap_tx": "0xf91842a53ebd610e5c93d0d46e044b6adbf95a90bd230581a26a067e0ccc6662",
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true },
+      { "tool": "uniswap-api", "endpoint": "POST /v2/quote", "success": true }
     ],
     "retries": 0,
     "output": {
       "txHash": "0x0a640860f806f78dc259c0335558b6b67248817ae38b8a4e1058edfce54db957",
-      "verified": true
+      "verified": true,
+      "swap_tx": "0xf91842a53ebd610e5c93d0d46e044b6adbf95a90bd230581a26a067e0ccc6662"
     }
   },
   {
@@ -445,23 +300,13 @@
     "rsi": 62.39216987392208,
     "trend": "BULLISH",
     "onchain_tx": "0xdef5e573363a5674d56bd28753b3beb514b70ddd9b724d7f473fc0e313ace7cd",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xdef5e573363a5674d56bd28753b3beb514b70ddd9b724d7f473fc0e313ace7cd",
-      "verified": true
-    }
+    "output": { "txHash": "0xdef5e573363a5674d56bd28753b3beb514b70ddd9b724d7f473fc0e313ace7cd", "verified": true }
   },
   {
     "id": 5,
@@ -474,23 +319,13 @@
     "rsi": 75.5663430420723,
     "trend": "NEUTRAL",
     "onchain_tx": "0x4830506acb0beb1eba4303f8a8ecc41aa5855f9f2e4eed8b1a46d3865c1d905a",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x4830506acb0beb1eba4303f8a8ecc41aa5855f9f2e4eed8b1a46d3865c1d905a",
-      "verified": true
-    }
+    "output": { "txHash": "0x4830506acb0beb1eba4303f8a8ecc41aa5855f9f2e4eed8b1a46d3865c1d905a", "verified": true }
   },
   {
     "id": 6,
@@ -503,23 +338,13 @@
     "rsi": 77.99717912552984,
     "trend": "NEUTRAL",
     "onchain_tx": "0xe293194d1047eacaf81af0019a2cbbbb71fae6b3e675f3d81dbdf51774bda746",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xe293194d1047eacaf81af0019a2cbbbb71fae6b3e675f3d81dbdf51774bda746",
-      "verified": true
-    }
+    "output": { "txHash": "0xe293194d1047eacaf81af0019a2cbbbb71fae6b3e675f3d81dbdf51774bda746", "verified": true }
   },
   {
     "id": 7,
@@ -532,23 +357,13 @@
     "rsi": 71.81239688899467,
     "trend": "NEUTRAL",
     "onchain_tx": "0xcc6fbf0fb1592d9b6c97d8688833a26df16f63a444295bf949564ede514f76cc",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xcc6fbf0fb1592d9b6c97d8688833a26df16f63a444295bf949564ede514f76cc",
-      "verified": true
-    }
+    "output": { "txHash": "0xcc6fbf0fb1592d9b6c97d8688833a26df16f63a444295bf949564ede514f76cc", "verified": true }
   },
   {
     "id": 8,
@@ -561,23 +376,13 @@
     "rsi": 80.08444757213329,
     "trend": "NEUTRAL",
     "onchain_tx": "0x318eadb69ea6e1ebef856b24368716edc09551a3aebf87b62f6e69d71e0fcc5a",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x318eadb69ea6e1ebef856b24368716edc09551a3aebf87b62f6e69d71e0fcc5a",
-      "verified": true
-    }
+    "output": { "txHash": "0x318eadb69ea6e1ebef856b24368716edc09551a3aebf87b62f6e69d71e0fcc5a", "verified": true }
   },
   {
     "id": 9,
@@ -590,23 +395,13 @@
     "rsi": 80.16818500350477,
     "trend": "NEUTRAL",
     "onchain_tx": "0x0085a258ed13f980d07b436c1253415dbbefebb922cd39033cba81634e4a335d",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x0085a258ed13f980d07b436c1253415dbbefebb922cd39033cba81634e4a335d",
-      "verified": true
-    }
+    "output": { "txHash": "0x0085a258ed13f980d07b436c1253415dbbefebb922cd39033cba81634e4a335d", "verified": true }
   },
   {
     "id": 10,
@@ -619,23 +414,13 @@
     "rsi": 85.85245164192601,
     "trend": "NEUTRAL",
     "onchain_tx": "0x17086224e0ae9161e76f7b9e9ba384b18f9cac9bb16ea945f825a9c51f044915",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x17086224e0ae9161e76f7b9e9ba384b18f9cac9bb16ea945f825a9c51f044915",
-      "verified": true
-    }
+    "output": { "txHash": "0x17086224e0ae9161e76f7b9e9ba384b18f9cac9bb16ea945f825a9c51f044915", "verified": true }
   },
   {
     "id": 11,
@@ -648,23 +433,13 @@
     "rsi": 86.08050371036724,
     "trend": "NEUTRAL",
     "onchain_tx": "0xa45f61ac115c806e4db85dce093ab8b5634af51b95756990b74df5270dd31a10",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xa45f61ac115c806e4db85dce093ab8b5634af51b95756990b74df5270dd31a10",
-      "verified": true
-    }
+    "output": { "txHash": "0xa45f61ac115c806e4db85dce093ab8b5634af51b95756990b74df5270dd31a10", "verified": true }
   },
   {
     "id": 12,
@@ -677,23 +452,13 @@
     "rsi": 77.79698691034865,
     "trend": "NEUTRAL",
     "onchain_tx": "0x8edf1661fbbc96c5de9712ecb05c55f1701626934bd57d16edcf34828d08a933",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x8edf1661fbbc96c5de9712ecb05c55f1701626934bd57d16edcf34828d08a933",
-      "verified": true
-    }
+    "output": { "txHash": "0x8edf1661fbbc96c5de9712ecb05c55f1701626934bd57d16edcf34828d08a933", "verified": true }
   },
   {
     "id": 13,
@@ -706,23 +471,13 @@
     "rsi": 79.22535211267562,
     "trend": "NEUTRAL",
     "onchain_tx": "0x2429f670480a7426b5cd87f54baa159e9d3e7821a67e772ca44ab2f97a18ac5b",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x2429f670480a7426b5cd87f54baa159e9d3e7821a67e772ca44ab2f97a18ac5b",
-      "verified": true
-    }
+    "output": { "txHash": "0x2429f670480a7426b5cd87f54baa159e9d3e7821a67e772ca44ab2f97a18ac5b", "verified": true }
   },
   {
     "id": 14,
@@ -735,23 +490,13 @@
     "rsi": 78.38499184339278,
     "trend": "NEUTRAL",
     "onchain_tx": "0x2a1ddcead1151ac4baec95b1a808c2aa7432954454975ca2de1a9bfee8272b8d",
+    "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x2a1ddcead1151ac4baec95b1a808c2aa7432954454975ca2de1a9bfee8272b8d",
-      "verified": true
-    }
+    "output": { "txHash": "0x2a1ddcead1151ac4baec95b1a808c2aa7432954454975ca2de1a9bfee8272b8d", "verified": true }
   },
   {
     "id": 1,
@@ -766,22 +511,11 @@
     "onchain_tx": "0xf18dad77e5a066dfdf2207c21e05bcd9d89d99fa2bf0066b56c4d773a02ded1b",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xf18dad77e5a066dfdf2207c21e05bcd9d89d99fa2bf0066b56c4d773a02ded1b",
-      "verified": true
-    }
+    "output": { "txHash": "0xf18dad77e5a066dfdf2207c21e05bcd9d89d99fa2bf0066b56c4d773a02ded1b", "verified": true }
   },
   {
     "id": 2,
@@ -796,22 +530,11 @@
     "onchain_tx": "0x1073f52bf674c681fbec631da84be04127efbf020032682620518f82e8f5f60d",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x1073f52bf674c681fbec631da84be04127efbf020032682620518f82e8f5f60d",
-      "verified": true
-    }
+    "output": { "txHash": "0x1073f52bf674c681fbec631da84be04127efbf020032682620518f82e8f5f60d", "verified": true }
   },
   {
     "id": 3,
@@ -826,22 +549,11 @@
     "onchain_tx": "0x49c053a45130cde8daa46ba3fadbd12feeacfad5322d4a27d41cf969ed3a9d55",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x49c053a45130cde8daa46ba3fadbd12feeacfad5322d4a27d41cf969ed3a9d55",
-      "verified": true
-    }
+    "output": { "txHash": "0x49c053a45130cde8daa46ba3fadbd12feeacfad5322d4a27d41cf969ed3a9d55", "verified": true }
   },
   {
     "id": 4,
@@ -856,22 +568,11 @@
     "onchain_tx": "0x44200615ff0295eb9a82fa74b47ec103f6c5dff6107d9c84d66c9e7963a1c18d",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x44200615ff0295eb9a82fa74b47ec103f6c5dff6107d9c84d66c9e7963a1c18d",
-      "verified": true
-    }
+    "output": { "txHash": "0x44200615ff0295eb9a82fa74b47ec103f6c5dff6107d9c84d66c9e7963a1c18d", "verified": true }
   },
   {
     "id": 5,
@@ -886,22 +587,11 @@
     "onchain_tx": "0x42c4be4c399f23ea8301c7c3d5c47fad08672a86b5e71b4a6721d8562d5013e5",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x42c4be4c399f23ea8301c7c3d5c47fad08672a86b5e71b4a6721d8562d5013e5",
-      "verified": true
-    }
+    "output": { "txHash": "0x42c4be4c399f23ea8301c7c3d5c47fad08672a86b5e71b4a6721d8562d5013e5", "verified": true }
   },
   {
     "id": 6,
@@ -916,22 +606,11 @@
     "onchain_tx": "0x44ea12bacd558b7ce785a432aaae51abe1d1f08904ccada121f415e054f172fe",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x44ea12bacd558b7ce785a432aaae51abe1d1f08904ccada121f415e054f172fe",
-      "verified": true
-    }
+    "output": { "txHash": "0x44ea12bacd558b7ce785a432aaae51abe1d1f08904ccada121f415e054f172fe", "verified": true }
   },
   {
     "id": 7,
@@ -946,22 +625,11 @@
     "onchain_tx": "0x86d17fa395ea107189a93a8047e289a676dc5f166e37f98f04e5897e40eca76e",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x86d17fa395ea107189a93a8047e289a676dc5f166e37f98f04e5897e40eca76e",
-      "verified": true
-    }
+    "output": { "txHash": "0x86d17fa395ea107189a93a8047e289a676dc5f166e37f98f04e5897e40eca76e", "verified": true }
   },
   {
     "id": 8,
@@ -976,22 +644,11 @@
     "onchain_tx": "0xe1e9d986c4ae287a7e26b1a384348fb360e2b379f453bd48df923961d252cad7",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xe1e9d986c4ae287a7e26b1a384348fb360e2b379f453bd48df923961d252cad7",
-      "verified": true
-    }
+    "output": { "txHash": "0xe1e9d986c4ae287a7e26b1a384348fb360e2b379f453bd48df923961d252cad7", "verified": true }
   },
   {
     "id": 9,
@@ -1006,22 +663,11 @@
     "onchain_tx": "0x189ebf8a938867d5bb68a951c1b00148a9fa1ab108b5ea7bd225c0f1c6b3b251",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x189ebf8a938867d5bb68a951c1b00148a9fa1ab108b5ea7bd225c0f1c6b3b251",
-      "verified": true
-    }
+    "output": { "txHash": "0x189ebf8a938867d5bb68a951c1b00148a9fa1ab108b5ea7bd225c0f1c6b3b251", "verified": true }
   },
   {
     "id": 1,
@@ -1036,22 +682,11 @@
     "onchain_tx": "0xb5b0596d996ea5b1b1e9fe6b746982ebf155695e96adefdee965b360f5b44c71",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xb5b0596d996ea5b1b1e9fe6b746982ebf155695e96adefdee965b360f5b44c71",
-      "verified": true
-    }
+    "output": { "txHash": "0xb5b0596d996ea5b1b1e9fe6b746982ebf155695e96adefdee965b360f5b44c71", "verified": true }
   },
   {
     "id": 10,
@@ -1066,22 +701,11 @@
     "onchain_tx": "0x0259853df8eaba49e02a42e629a61b86264ce03a6d31ead33ad5224a2edf7144",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x0259853df8eaba49e02a42e629a61b86264ce03a6d31ead33ad5224a2edf7144",
-      "verified": true
-    }
+    "output": { "txHash": "0x0259853df8eaba49e02a42e629a61b86264ce03a6d31ead33ad5224a2edf7144", "verified": true }
   },
   {
     "id": 2,
@@ -1096,22 +720,11 @@
     "onchain_tx": "0xb9863895565a7beb45e356912c0216a6fd8e68513c35e270fc9ee636ba2a88b9",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xb9863895565a7beb45e356912c0216a6fd8e68513c35e270fc9ee636ba2a88b9",
-      "verified": true
-    }
+    "output": { "txHash": "0xb9863895565a7beb45e356912c0216a6fd8e68513c35e270fc9ee636ba2a88b9", "verified": true }
   },
   {
     "id": 11,
@@ -1126,22 +739,11 @@
     "onchain_tx": "0xf75754387249b12393e757c87c938b839f22b55a23780bdead1b7cee576555d2",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xf75754387249b12393e757c87c938b839f22b55a23780bdead1b7cee576555d2",
-      "verified": true
-    }
+    "output": { "txHash": "0xf75754387249b12393e757c87c938b839f22b55a23780bdead1b7cee576555d2", "verified": true }
   },
   {
     "id": 3,
@@ -1156,22 +758,11 @@
     "onchain_tx": "0xe08e2c35366e33608d0d9eba5e896e0c70912b4a31f2c211e53b722167e605a1",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xe08e2c35366e33608d0d9eba5e896e0c70912b4a31f2c211e53b722167e605a1",
-      "verified": true
-    }
+    "output": { "txHash": "0xe08e2c35366e33608d0d9eba5e896e0c70912b4a31f2c211e53b722167e605a1", "verified": true }
   },
   {
     "id": 12,
@@ -1186,22 +777,11 @@
     "onchain_tx": "0x6abd8231a99dd792f0711d37b84dcefdd6250b41f874e5be6700c5f42a635b6c",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x6abd8231a99dd792f0711d37b84dcefdd6250b41f874e5be6700c5f42a635b6c",
-      "verified": true
-    }
+    "output": { "txHash": "0x6abd8231a99dd792f0711d37b84dcefdd6250b41f874e5be6700c5f42a635b6c", "verified": true }
   },
   {
     "id": 1,
@@ -1216,22 +796,11 @@
     "onchain_tx": "0x62765ea597cddb5d7d6133f867001fba69f0ca44b616fc485e3773e3f9b45941",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x62765ea597cddb5d7d6133f867001fba69f0ca44b616fc485e3773e3f9b45941",
-      "verified": true
-    }
+    "output": { "txHash": "0x62765ea597cddb5d7d6133f867001fba69f0ca44b616fc485e3773e3f9b45941", "verified": true }
   },
   {
     "id": 2,
@@ -1246,22 +815,11 @@
     "onchain_tx": "0x9e1664ad78b2b546bca270ef77f2b7cf687b35f6c8d19aa4788986a0387778c4",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x9e1664ad78b2b546bca270ef77f2b7cf687b35f6c8d19aa4788986a0387778c4",
-      "verified": true
-    }
+    "output": { "txHash": "0x9e1664ad78b2b546bca270ef77f2b7cf687b35f6c8d19aa4788986a0387778c4", "verified": true }
   },
   {
     "id": 3,
@@ -1276,22 +834,11 @@
     "onchain_tx": "0x38ebdd37b3d792abc01a2a84c228dd3e712199e26a50837e7f054000e8a5a560",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x38ebdd37b3d792abc01a2a84c228dd3e712199e26a50837e7f054000e8a5a560",
-      "verified": true
-    }
+    "output": { "txHash": "0x38ebdd37b3d792abc01a2a84c228dd3e712199e26a50837e7f054000e8a5a560", "verified": true }
   },
   {
     "id": 4,
@@ -1306,22 +853,11 @@
     "onchain_tx": "0x5ec214a22bfc918946a4d6c0a4257e738e4297d2a21c88f87157c6909027c56f",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x5ec214a22bfc918946a4d6c0a4257e738e4297d2a21c88f87157c6909027c56f",
-      "verified": true
-    }
+    "output": { "txHash": "0x5ec214a22bfc918946a4d6c0a4257e738e4297d2a21c88f87157c6909027c56f", "verified": true }
   },
   {
     "id": 5,
@@ -1336,22 +872,11 @@
     "onchain_tx": "0x7174c35b70cf302b50c2e1959d1464cc72e1750683447dbcd92fe5654accf17c",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x7174c35b70cf302b50c2e1959d1464cc72e1750683447dbcd92fe5654accf17c",
-      "verified": true
-    }
+    "output": { "txHash": "0x7174c35b70cf302b50c2e1959d1464cc72e1750683447dbcd92fe5654accf17c", "verified": true }
   },
   {
     "id": 6,
@@ -1366,22 +891,11 @@
     "onchain_tx": "0x06d2e4e357986737bb9a89d5b993e2b275a79849fe1378da9c365b868ebe8aaf",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x06d2e4e357986737bb9a89d5b993e2b275a79849fe1378da9c365b868ebe8aaf",
-      "verified": true
-    }
+    "output": { "txHash": "0x06d2e4e357986737bb9a89d5b993e2b275a79849fe1378da9c365b868ebe8aaf", "verified": true }
   },
   {
     "id": 7,
@@ -1396,22 +910,11 @@
     "onchain_tx": "0x34197fec841e1f6a7268407c4d4a37665cb162598240fa5f454f2d2d40e8089b",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0x34197fec841e1f6a7268407c4d4a37665cb162598240fa5f454f2d2d40e8089b",
-      "verified": true
-    }
+    "output": { "txHash": "0x34197fec841e1f6a7268407c4d4a37665cb162598240fa5f454f2d2d40e8089b", "verified": true }
   },
   {
     "id": 1,
@@ -1426,22 +929,11 @@
     "onchain_tx": "0xc0d4ccc660e0e1ba8cacb0552c8940c7cf7cf2d7896d35cfd74c2aaa9513219b",
     "swap_tx": null,
     "tool_calls": [
-      {
-        "tool": "binance-api",
-        "endpoint": "GET /api/v3/klines",
-        "success": true
-      },
-      {
-        "tool": "ethers-contract",
-        "method": "logAction()",
-        "success": true
-      }
+      { "tool": "binance-api", "endpoint": "GET /api/v3/klines", "success": true },
+      { "tool": "ethers-contract", "method": "logAction()", "success": true }
     ],
     "retries": 0,
-    "output": {
-      "txHash": "0xc0d4ccc660e0e1ba8cacb0552c8940c7cf7cf2d7896d35cfd74c2aaa9513219b",
-      "verified": true
-    }
+    "output": { "txHash": "0xc0d4ccc660e0e1ba8cacb0552c8940c7cf7cf2d7896d35cfd74c2aaa9513219b", "verified": true }
   },
   {
     "id": 1,
@@ -1467,6 +959,110 @@
     "rsi": 31.664295874822898,
     "trend": "NEUTRAL",
     "onchain_tx": "0xf772f89f4b18370fcfe69262bda8e48173263a5e1c4465febf178bc465ecff44",
+    "swap_tx": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-18T00:48:14.288Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2319.76,
+    "reason": "RSI neutral (45.8)",
+    "rsi": 45.837187789084396,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0xe554b852d7f41582e3bd44c7439b094ed1b02b125563d9111f20455b8de650a1",
+    "swap_tx": null
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-18T00:53:14.265Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2322.39,
+    "reason": "RSI neutral (54.0)",
+    "rsi": 54.03128760529466,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0xa50aa946a2a22141b8b60f54650833e7c48eba0254a779f9c8880ae5d725b16d",
+    "swap_tx": null
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-03-18T00:58:14.609Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2323.06,
+    "reason": "RSI neutral (51.9)",
+    "rsi": 51.85278548021147,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x21d19764f8df4c4f3d719e7c439d92636983253692fb1d41fa483b3c0a11cca0",
+    "swap_tx": null
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-03-18T01:03:14.310Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2328.45,
+    "reason": "RSI neutral (61.1)",
+    "rsi": 61.12550035319021,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x81089291de4dcce81375765c8b938bd07d1d716b48d0cfa2c190b64ec36b8e0a",
+    "swap_tx": null
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-03-18T01:08:14.312Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2326.85,
+    "reason": "RSI neutral (61.4)",
+    "rsi": 61.44724104549842,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0xa1b1f8d88fc0ed9cf15e7f613a4acc26155f019e48bee5591fa02f36ff750975",
+    "swap_tx": null
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-03-18T01:13:14.321Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2325.79,
+    "reason": "RSI neutral (57.9)",
+    "rsi": 57.949444838176184,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x171f0028e00e697be7517a1e3eac03c009aba291e9dd5d0abcf99288cd492205",
+    "swap_tx": null
+  },
+  {
+    "id": 9,
+    "timestamp": "2026-03-18T01:18:14.329Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2323.95,
+    "reason": "RSI neutral (53.4)",
+    "rsi": 53.36024697221549,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x670ac33ed5cf2029afcb51fe85ae1c9992ec9aebd7b802427e60f7eee893a322",
+    "swap_tx": null
+  },
+  {
+    "id": 10,
+    "timestamp": "2026-03-18T01:23:14.533Z",
+    "agent": "0xDfa93dE358BDA440D74811aD03fAf7808e9968C7",
+    "action": "HOLD",
+    "score": 50,
+    "price": 2328.45,
+    "reason": "RSI neutral (58.2)",
+    "rsi": 58.2486136783732,
+    "trend": "NEUTRAL",
+    "onchain_tx": "0x1e22aa46e8cd564300a4a7013d5bdbf1827b5d3b51d1dd9d63d374b632f05b34",
     "swap_tx": null
   }
 ]
