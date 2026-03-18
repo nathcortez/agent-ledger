@@ -130,10 +130,12 @@ export default function Home() {
                 <span className="text-2xl">🧠</span>
                 <h2 className="text-lg font-bold text-white">Proof of Cognition</h2>
               </div>
+              {/* ✅ CAMBIO 1: framing más preciso, sin overclaim */}
               <p className="text-gray-400 text-sm max-w-xl">
                 AgentLedger doesn't just log <em>what</em> the agent did —
-                it logs <em>why</em>. Every BUY/SELL/HOLD decision is stamped with
-                RSI reasoning and stored immutably on-chain before any action is taken.
+                it logs the <em>signals</em> that triggered the decision. Every BUY/SELL/HOLD
+                is stamped with its input data (RSI value, price, trend) on-chain before execution —
+                creating an auditable decision trail for any autonomous agent.
               </p>
               <p className="text-purple-400/80 text-xs mt-2 font-mono">
                 Agent Identity: ERC-8004 ✅ &nbsp;|&nbsp; Operator: {AGENT_ADDRESS.slice(0,8)}...{AGENT_ADDRESS.slice(-6)}
@@ -203,8 +205,8 @@ export default function Home() {
         <div className="bg-gray-900/50 rounded-2xl p-5 mb-6 border border-gray-800">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h2 className="font-semibold text-white">ETH Price + Cognition Signals</h2>
-              <p className="text-gray-500 text-xs">🟢 BUY &nbsp; 🔴 SELL — each dot = one on-chain proof of cognition</p>
+              <h2 className="font-semibold text-white">ETH Price + Decision Signals</h2>
+              <p className="text-gray-500 text-xs">🟢 BUY &nbsp; 🔴 SELL — each dot = one on-chain verified decision</p>
             </div>
             {logs.length > 0 && (
               <div className="text-right">
@@ -265,20 +267,21 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Cognition Ledger Table */}
+        {/* Decision Ledger Table */}
         <div className="bg-gray-900/50 rounded-2xl border border-gray-800">
           <div className="p-5 border-b border-gray-800 flex items-center justify-between">
             <div>
               <h2 className="font-semibold text-white">🧠 Cognition Ledger</h2>
+              {/* ✅ CAMBIO 2: subtitle más preciso */}
               <p className="text-gray-500 text-xs">
-                Every decision logged on-chain · verified on Etherscan · immutable record of agent reasoning
+                Every decision logged on-chain · verified on Etherscan · full input signals preserved immutably
               </p>
             </div>
-            <span className="text-xs text-gray-600">{logs.length} proofs of cognition</span>
+            <span className="text-xs text-gray-600">{logs.length} on-chain decisions</span>
           </div>
 
           {loading ? (
-            <div className="p-10 text-center text-gray-500">Loading cognition records...</div>
+            <div className="p-10 text-center text-gray-500">Loading decision records...</div>
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -288,7 +291,7 @@ export default function Home() {
                     <th className="text-left p-4">Decision</th>
                     <th className="text-left p-4">ETH Price</th>
                     <th className="text-left p-4">RSI</th>
-                    <th className="text-left p-4">Agent Reasoning</th>
+                    <th className="text-left p-4">Input Signals</th>
                     <th className="text-left p-4">On-Chain Proof</th>
                     <th className="text-left p-4">Swap</th>
                   </tr>
