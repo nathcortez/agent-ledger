@@ -74,6 +74,25 @@ gasPrice: 0 (gasless ✅)
 Status: SUCCESS ✅
 Network: Status Network Sepolia
 Explorer: https://sepoliascan.status.network/tx/0xaf1ff7e6597cc904324110317c11f5d0e5d036df9ca307d8d58772feafd1d0de
+
+
+## 💱 Uniswap Integration — Agentic Finance
+
+AgentLedger integrates the Uniswap Developer Platform API as the execution layer for autonomous BUY decisions. When the agent's RSI analysis signals a confirmed uptrend, it executes a real ETH→USDC swap without human intervention.
+
+- **API Key:** Uniswap Developer Platform (real key, not mocked)
+- **Protocol:** Uniswap v3 via Trading API `/v2/quote`
+- **Swap TxHash:** [`0xf91842a5...`](https://sepolia.etherscan.io/tx/0xf91842a53ebd610e5c93d0d46e044b6adbf95a90bd230581a26a067e0ccc6662)
+- **Pair:** ETH → USDC on Ethereum Sepolia
+- **Execution:** Fully autonomous — triggered by RSI Uptrend signal, no human click required
+
+Agent decision loop: RSI > 60 + Uptrend detected → Uniswap API quote fetched → methodParameters signed by agent wallet → swap executed via wallet.sendTransaction() → TxHash logged onchain as proof of execution
+
+
+This is agentic finance: the agent doesn't just hold tokens — it **decides** when to trade based on market signals and **executes** the swap autonomously with a cryptographic receipt.
+
+---
+
 🛡️ Safety & Guardrails
 The agent includes multiple safety mechanisms to prevent runaway behavior:
 
