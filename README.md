@@ -1,5 +1,8 @@
 # ⛓ AgentLedger
 
+## 🎥 Demo Video
+[![AgentLedger Demo](https://img.youtube.com/vi/qFYjhOkyulY/0.jpg)](https://youtu.be/qFYjhOkyulY)
+
 > On-chain reputation infrastructure for autonomous agents.
 
 **Live Dashboard:** https://agent-ledger-alpha.vercel.app  
